@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Random random = new Random();
         int numberToGuess = random.nextInt(10);
-        int numberOfTries =3;
+        int numberOfTries =0;
         Scanner scanner = new Scanner(System.in);
         int guess;
         boolean win = false;
@@ -13,7 +13,7 @@ public class Main {
         while (win == false) {
             System.out.println("Type your number:");
             guess = scanner.nextInt();
-            numberOfTries = 3;
+            numberOfTries++;
             if (guess == numberToGuess) {
                 win = true;
             } else if (guess < numberToGuess) {
